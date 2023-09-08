@@ -15,7 +15,7 @@ Welcome to the Random Recipe Generator! This web application provides you with a
 
 ## Demo
 
-You can try out the Random Recipe Generator website live by visiting [[this link]([https://kayawebdesign.com/recipegenerator/]
+You can try out the Random Recipe Generator website live by visiting [https://kayawebdesign.com/recipegenerator/]
 
 ## Getting Started
 
