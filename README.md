@@ -27,7 +27,17 @@ To run this project locally or deploy it to your own server, follow these steps:
    git clone https://github.com/kayawebd/recipegenerator.git
 
 
-Welcome any feedbacks and contributions :)
-contact: info@kayawebdesign.com
+## Feedback and Contributions
+
+Your feedback, suggestions, and contributions to this project are highly valued. If you have ideas for improvements, encounter issues, or want to contribute in any way, please don't hesitate to get in touch with me.
+
+- **Email:** [info@kayawebdesign.com](mailto:info@kayawebdesign.com)
+
+## License
+recipegenerator is licensed under MIT.
+
+
+
+
 
 
