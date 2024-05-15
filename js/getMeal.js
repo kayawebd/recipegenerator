@@ -42,14 +42,13 @@ const createMeal = (meal) => {
       <p>${meal.strInstructions.replace(/\r\n/g, "<br><br>")}</p>
     </div>       
   </div>
-  ${
-    meal.strYoutube
+  ${meal.strYoutube
       ? `
         <div class="videoRow">
           <div class="videoWrapper">
             <iframe src="https://www.youtube.com/embed/${meal.strYoutube.slice(
-              -11
-            )}">
+        -11
+      )}">
             </iframe>
             <div class="searchYoutubeContainer">
               <p>More videos on Youtube:</p>
@@ -79,7 +78,7 @@ const createMeal = (meal) => {
               </div>
             </div>
        `
-  }
+    }
 `;
 
   // SEARCH ON YOUTUBE
