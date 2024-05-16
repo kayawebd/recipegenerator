@@ -5,36 +5,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Start cooking with an instant random recipe.">
-    <meta name="keywords" content="recipe, cooking, dinner, food">
+    <meta name="description"
+        content="Click a button to get a random recipe suggestion from a diverse collection of cuisines. Start cooking with an instant random recipe generator.">
+    <meta name="keywords" content="recipe generator, cooking, dinner, food">
     <meta name="author" content="kayawebdesign.com">
     <meta property="og:title" content="Get Recipe">
-    <meta property="og:description" content="Start cooking with an instant random recipe.">
+    <meta property="og:description"
+        content="Click a button to get a random recipe suggestion from a diverse collection of cuisines. Start cooking with an instant random recipe generator.">
     <meta property="og:url" content="https://kayawebdesign.com/recipegenerator/">
     <meta property="og:type" content="website">
-    <title>Get Recipe</title>
-    <link rel="stylesheet" href="./styles/normalize.css">
-    <link rel="stylesheet" href="./styles/style.min.css">
-    <script defer src="./js/getMeal.min.js"></script>
-    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <title>Recipe Generator</title>
+    <!-- <link rel="stylesheet" href="./styles/normalize.css"> -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <script defer src="./js/getMeal.js"></script>
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <h1 class="sr-only">Start cooking with an instant random recipe.</h1>
     <div class="mealContainer siteWrapper">
-        <div class="mainNav">
-            <h1>
-                What should I cook for dinner?
-            </h1>
+        <h1 class="sr-only">Start cooking with an instant random recipe generator.</h1>
+        <nav class="mainNav">
+            <h2 class="mainNav-heading">
+                What's for dinner?
+            </h2>
             <button id="cookDinner">Get Recipe 🍜</button>
-        </div>
-        <div id="recipeContainer" class="recipeContainer"></div>
+        </nav>
+        <article id="recipeContainer" class="recipeContainer"></article>
+        <footer>
+            <div class="footerContainer siteWrapper">
+                <small>&copy; 2023 <a href="https://kayawebdesign.com/">Kaya Web Design.</a> All rights
+                    reserved.</small>
+            </div>
+        </footer>
     </div>
-    <footer>
-        <div class="footerContainer siteWrapper">
-            <small>&copy; 2023 <a href="https://kayawebdesign.com/">Kaya Web Design.</a> All rights reserved.</small>
-        </div>
-    </footer>
 </body>
 
 </html>

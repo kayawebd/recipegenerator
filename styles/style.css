@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+:root {
+    --block_top_space: 40px;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    background-color: #fffbe5;
+}
+
 .sr-only:not(:focus) {
     clip: rect(1px, 1px, 1px, 1px);
     overflow: hidden;
@@ -22,33 +32,13 @@ picture {
     width: auto;
 }
 
-:root {
-    --FONT_SIZE: 16px;
-    --PRIMARY_COLOR: #ffe54c;
-    --WHITE_COLOR: #ffffff;
-    --SMALL_SCREEN_PADDING: 10px;
-    --BORDER_RADIUS: 10px;
-    --BLOCK_TOP_SPACE: 40px;
-}
-
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: var(--FONT_SIZE);
-    background-color: #fffbe5;
-}
-
-h3,
-h4,
-h5,
-h6 {
-    font-size: 1.2em;
-    font-weight: 600;
-}
-
 /* BUTTON STYLE 
 -------------------------------------------------*/
+.mainNav .mainNav-heading {
+    text-align: center;
+}
+
 .mainNav button {
-    font-size: var(--FONT_SIZE);
     font-weight: 200;
     letter-spacing: 1px;
     padding: 13px 40px 13px;
@@ -57,18 +47,18 @@ h6 {
     cursor: pointer;
     position: relative;
     background-color: rgba(0, 0, 0, 0);
-    width: 100%;
+    width: 80%;
 }
 
 .mainNav button:after {
     content: "";
-    background-color: var(--PRIMARY_COLOR);
+    background-color: #ffe54c;
     width: 100%;
     z-index: -1;
     position: absolute;
     height: 100%;
-    top: calc(var(--SMALL_SCREEN_PADDING) - 2px);
-    left: calc(var(--SMALL_SCREEN_PADDING) - 2px);
+    top: 8px;
+    left: 8px;
     transition: 0.2s;
 }
 
@@ -76,6 +66,7 @@ h6 {
     top: 0px;
     left: 0px;
 }
+
 
 .primaryButton {
     display: flex;
@@ -89,7 +80,7 @@ h6 {
 }
 
 .primaryButton button {
-    background-color: var(--PRIMARY_COLOR);
+    background-color: #ffe54c;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,7 +92,7 @@ h6 {
 
 .searchYoutubeContainer {
     text-align: center;
-    margin-bottom: var(--BLOCK_TOP_SPACE);
+    margin-bottom: var(--block_top_space);
 }
 
 .searchYoutubeContainer .primaryButton a {
@@ -120,7 +111,7 @@ h6 {
     }
 
     .recipeInstructions .primaryButton {
-        margin-top: var(--BLOCK_TOP_SPACE);
+        margin-top: var(--block_top_space);
     }
 
     .searchYoutubeContainer {
@@ -128,7 +119,7 @@ h6 {
         justify-content: space-between;
         align-items: center;
         flex-direction: row;
-        margin-top: var(--BLOCK_TOP_SPACE);
+        margin-top: var(--block_top_space);
     }
 
     .searchYoutubeContainer .primaryButton {
@@ -147,7 +138,10 @@ h6 {
     align-items: center;
     gap: 2em;
     width: 100%;
-    padding: var(--SMALL_SCREEN_PADDING);
+    position: sticky;
+    top: 0;
+    background-color: #fffbe5;
+    z-index: 1000;
 }
 
 .mealContainer {
@@ -155,7 +149,8 @@ h6 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 1.5em);
+    min-height: 100vh;
+    padding: 0 4%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -172,19 +167,18 @@ h6 {
 /* IMAGE CONTAINER
 ---------------------------------------------*/
 .imgContainer {
-    padding: var(--SMALL_SCREEN_PADDING);
     margin-top: 20px;
     text-align: center;
 }
 
 .imgContainer img {
-    border-radius: var(--BORDER_RADIUS);
+    border-radius: 10px;
 }
 
 @media (min-width: 700px) {
     .imgContainer {
         padding: 0;
-        margin-top: var(--BLOCK_TOP_SPACE);
+        margin-top: var(--block_top_space);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -203,7 +197,6 @@ h6 {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: var(--SMALL_SCREEN_PADDING);
 }
 
 .recipeInstructions .ingredient,
@@ -233,8 +226,8 @@ h6 {
 .ingredient,
 .method {
     padding: 10px;
-    background-color: var(--WHITE_COLOR);
-    border-radius: var(--BORDER_RADIUS);
+    background-color: #ffffff;
+    border-radius: 10px;
 }
 
 .method p {
@@ -282,7 +275,7 @@ p {
 @media (min-width: 700px) {
     .videoWrapper iframe {
         height: 800px;
-        border-radius: var(--BORDER_RADIUS);
+        border-radius: 10px;
     }
 }
 
@@ -291,7 +284,11 @@ p {
 /* FOOTER
 -----------------------------------------*/
 footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     text-align: center;
+    padding: 1%;
 }
 
 small a {

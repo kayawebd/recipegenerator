@@ -51,7 +51,7 @@ const createMeal = (meal) => {
       )}">
             </iframe>
             <div class="searchYoutubeContainer">
-              <p>More videos on Youtube:</p>
+              <p>Find More videos on Youtube:</p>
               <div class="primaryButton">
                 <a href="#" id="searchYoutube">
                   <button>
