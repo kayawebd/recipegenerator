@@ -1,0 +1,289 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 16px;
+    background-color: #fffbe5;
+}
+
+.sr-only:not(:focus) {
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    border: 0;
+}
+
+img,
+picture {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+}
+
+.mainNav button {
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    padding: 13px 40px 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+}
+
+.mainNav.fixedBottom {
+    bottom: 0;
+    position: fixed;
+}
+
+.mainNav button:after {
+    content: "";
+    background-color: #ffe54c;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 8px;
+    left: 8px;
+    transition: 0.2s;
+}
+
+.buttonClicked .mainNav h1 {
+    display: none;
+}
+
+.buttonClicked .mainNav button {}
+
+.mainNav button:hover:after {
+    top: 0px;
+    left: 0px;
+}
+
+.primaryButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.primaryButton a {
+    text-decoration: none;
+    width: 100%;
+}
+
+.primaryButton button {
+    background-color: #ffe54c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7em;
+    padding: 13px 40px 13px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.searchYoutubeContainer {
+    text-align: center;
+    margin-bottom: var(--BLOCK_TOP_SPACE);
+}
+
+.searchYoutubeContainer .primaryButton a {
+    width: 90%;
+}
+
+.searchYoutubeContainer p {
+    font-size: 1.1em;
+
+}
+
+@media (min-width: 700px) {
+
+    .mainNav button {
+        flex: 0 0 20%;
+    }
+
+    .buttonClicked .mainNav button {
+        flex: 0 0 100%;
+    }
+
+    .recipeInstructions .primaryButton {}
+
+    .searchYoutubeContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        padding-top: 20px;
+    }
+
+    .searchYoutubeContainer .primaryButton {
+        flex: 1 1;
+        justify-content: flex-end;
+    }
+
+}
+
+.mainNav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10em;
+    width: 100%;
+    padding: 10px;
+    position: fixed;
+    bottom: 2em;
+    background-color: #fffbe5;
+}
+
+.mealContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 2.5em);
+}
+
+.recipeContainer {
+    margin-bottom: 4em;
+}
+
+@media only screen and (min-width: 768px) {
+    .siteWrapper {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .mainNav {
+        flex-direction: row;
+        bottom: auto;
+        justify-content: center;
+    }
+}
+
+.imgContainer {
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.imgContainer img {
+    border-radius: 10px;
+}
+
+@media (min-width: 700px) {
+    .imgContainer {
+        padding: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imgContainer img {
+        max-width: 700px;
+        max-height: 700px;
+    }
+}
+
+.recipeInstructions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+}
+
+.recipeInstructions .ingredient,
+.recipeInstructions .method {
+    padding: 1.3em;
+}
+
+@media (min-width: 1200px) {
+    .recipeInstructions {
+        padding: 0;
+        flex-direction: row;
+
+    }
+
+    .recipeInstructions .ingredient {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .recipeInstructions .ingredient,
+    .recipeInstructions .method {
+        flex: 0 0 calc(50% - 10px);
+        max-width: calc(50% - 10px);
+    }
+}
+
+.ingredient,
+.method {
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.method p {
+    line-height: 1.5em;
+}
+
+.ingredient ul {
+    padding-left: 0.3em;
+}
+
+.ingredient li {
+    list-style-type: "\1F944";
+    margin: 17px 15px;
+    border-bottom: 1px solid rgb(224, 224, 224);
+    padding-bottom: 5px;
+}
+
+/* PRESERVE LINE BREAKS  
+THERE IS LINE BREAKS IN THE meals.strInstructions!!  
+*/
+p {
+    white-space: pre-line;
+}
+
+.videoRow {
+    padding-top: 10px;
+    margin-bottom: var(--BLOCK_TOP_SPACE);
+    text-align: center;
+}
+
+.videoRow h3,
+.videoUnavailable {
+    padding: 10px;
+    text-align: center;
+}
+
+.videoWrapper iframe {
+    display: block;
+    height: 70vh;
+    width: 100%;
+}
+
+@media (min-width: 700px) {
+    .videoWrapper iframe {
+        height: 800px;
+        border-radius: 10px;
+    }
+}
+
+.videoRow a {}
+
+footer {
+    text-align: center;
+}
+
+small a {
+    color: black;
+}
