@@ -1,5 +1,6 @@
 {
   "title": "Recipe Generator",
   "description": "Discover new random meal ideas with our Recipe Generator!",
-  "technologies": ["HTML", "CSS", "JavaScript"]
+  "technologies": ["HTML", "CSS", "JavaScript"],
+  "github": "https://github.com/kayawebd/recipegenerator"
 }
